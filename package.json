@@ -1,3 +1,14 @@
 {
-  "name": "name-xxx-xxx"
+  "name": "name-xxx-xxx",
+  "scripts": {
+    "dev": "node a.js"
+  },
+  "devDependencies": {
+    "address": "^1.1.2"
+  },
+  "dependencies": {
+    "address": "^1.1.2",
+    "axios": "^0.21.1",
+    "node-fetch": "^2.6.1"
+  }
 }
