@@ -1,16 +1,25 @@
 const http = require('http')
 
-const port = 3000
+const port = 3000;
+const addr = require('address')
+const ip   = addr.ip();
+
 
 const server = http.createServer((req, res) => {
   res.statusCode = 200
-  res.setHeader('Content-Type', 'text/plain')
-  res.end('你好世界\n')
+  res.setHeader('Content-Type', 'application/json')
+  res.end('这是输出的内容------1111')
 })
 
 server.listen(port, (e) => {
-  console.log(`服务器运行在 http://hostname:${port}/`)
+  console.log(`服务器运行在 http://${ip}:${port}/`)
 })
+
+
+
+const os = require('os');
+let aaa = os.networkInterfaces()
+console.log(aaa,'ox')
 
 
 
